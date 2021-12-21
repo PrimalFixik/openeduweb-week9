@@ -17,7 +17,7 @@ export default (express, bodyParser, fs, crypto, http, mongodb, path, cors) => {
     app.options('*', cors());
 
     app 
-        .get('/wordpress/wp-json/wp/v2/posts/1', (req, res) => res.status(200).json({title: {id: 1, rendered: "gamzanikita"}}))
+        .get('/wordpress/wp-json/wp/v2/posts/1', (req, res) => res.status(200).json({title: {id: 1, rendered: "itmo307700"}}))
         .post('/render/', (req, res) => {
             const {random2, random3} = req.body;
 
@@ -56,7 +56,7 @@ export default (express, bodyParser, fs, crypto, http, mongodb, path, cors) => {
             res.status(200).end();
         
         })
-        .get('/login/', (req, res) => res.send('gamzanikita'))
+        .get('/login/', (req, res) => res.send('itmo307700'))
         .get('/code/', (req, res) => fs.createReadStream(import.meta.url.substring(7)).pipe(res))
         .get('/sha1/:input/', (req, res) => {
             const { input } = req.params;
@@ -109,7 +109,7 @@ export default (express, bodyParser, fs, crypto, http, mongodb, path, cors) => {
             });
         })
         .all('*', (req, res) => {
-            res.send('gamzanikita');
+            res.send('itmo307700');
         });
 
 
